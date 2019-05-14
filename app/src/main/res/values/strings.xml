@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Android_Calendar</string>
+    <string name="month_string">월</string>
+    <string name="week_string">주</string>
+    <string name="day_string">일</string>
+
 </resources>
