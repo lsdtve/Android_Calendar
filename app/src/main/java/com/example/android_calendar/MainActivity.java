@@ -13,10 +13,16 @@ import com.example.android_calendar.fragment.DayFragment;
 import com.example.android_calendar.fragment.MonthFragment;
 import com.example.android_calendar.fragment.WeekFragment;
 import com.example.android_calendar.viewmodel.MainViewModel;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.CalendarMode;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements TabLayout.BaseOnTabSelectedListener {
 
     ActivityMainBinding binding;
+
 
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
