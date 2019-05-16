@@ -14,7 +14,7 @@ import com.example.android_calendar.databinding.MonthFragmentBinding;
 import com.example.android_calendar.databinding.WeekFragmentBinding;
 
 public class WeekFragment extends Fragment {
-    WeekFragmentBinding binding;
+    private WeekFragmentBinding binding;
 
     @Nullable
     @Override

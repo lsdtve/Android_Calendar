@@ -14,7 +14,7 @@ import com.example.android_calendar.databinding.DayFragmentBinding;
 import com.example.android_calendar.databinding.MonthFragmentBinding;
 
 public class DayFragment  extends Fragment {
-    DayFragmentBinding binding;
+    private DayFragmentBinding binding;
 
     @Nullable
     @Override
