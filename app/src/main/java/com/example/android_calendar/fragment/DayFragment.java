@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 
 import com.example.android_calendar.R;
 import com.example.android_calendar.databinding.DayFragmentBinding;
-import com.example.android_calendar.databinding.MonthFragmentBinding;
 
 public class DayFragment  extends Fragment {
     private DayFragmentBinding binding;
