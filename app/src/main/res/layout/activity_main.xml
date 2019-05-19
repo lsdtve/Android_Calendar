@@ -2,9 +2,6 @@
 <layout>
 
     <data>
-        <variable
-            name="vm"
-            type="com.example.android_calendar.viewmodel.MainViewModel" />
 
     </data>
 
@@ -19,8 +16,8 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+            android:layout_height="50dp"
+            android:background="#039BE5"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,6 +27,7 @@
             />
         <android.support.design.widget.TabLayout
             android:id="@+id/calendar_table"
+            android:background="#039BE5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"

@@ -10,6 +10,6 @@
 
         android:width="5px"
 
-        android:color="#a9dbf0cb" />
+        android:color="#ff0000" />
 
 </shape>

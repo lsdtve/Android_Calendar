@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <data>
+
+    </data>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#039BE5"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_weight="1"
             android:orientation="horizontal">
 
@@ -17,75 +34,75 @@
                 android:id="@+id/btnchangedate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="날짜 대화상자" />
+                android:layout_gravity="center"
+                android:background="#AFEEEE"
+                android:text="날짜 선택" />
 
             <TextView
                 android:id="@+id/txtdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
                 android:text="date"
                 android:textSize="20sp" />
         </LinearLayout>
 
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:layout_below="@+id/text_gender"
+            android:background="#AAAAAA" />
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="50dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="일정을 입력하세요" />
 
             <EditText
                 android:id="@+id/edit_string"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EEEEEE"
                 android:ems="10"
+                android:gravity="start"
                 android:inputType="textPersonName"
-                android:maxLength="10" />
+                android:maxLength="200" />
 
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:layout_margin="15dp"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/save_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:background="#AFEEEE"
+                android:layout_gravity="top"
+                android:gravity="center"
                 android:text="추가" />
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <ScrollView
-                android:id="@+id/scroll_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/line2"
-                android:layout_marginTop="5dp"
-                android:fillViewport="true"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="8dp">
-
-                <ListView
-                    android:id="@+id/db_list_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></ListView>
-
-            </ScrollView>
-        </LinearLayout>
 
     </LinearLayout>
 </layout>

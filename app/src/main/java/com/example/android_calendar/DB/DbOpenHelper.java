@@ -53,26 +53,17 @@ public class DbOpenHelper {
     }
 
     // Insert DB
-    public long insertColumn(Long myday, String str){
+    public long insertColumn(Long myday, String schedule){
         ContentValues values = new ContentValues();
         values.put(DataBases.CreateDB.DAY, myday);
-        values.put(DataBases.CreateDB.STR, str);
+        values.put(DataBases.CreateDB.STR, schedule);
         return mDB.insert(DataBases.CreateDB._TABLENAME0, null, values);
-    }
-
-    // Update DB
-    public boolean updateColumn(long id, Long myday, String str){
-        ContentValues values = new ContentValues();
-        values.put(DataBases.CreateDB.DAY, myday);
-        values.put(DataBases.CreateDB.STR, str);
-        return mDB.update(DataBases.CreateDB._TABLENAME0, values, "_id=" + id, null) > 0;
     }
 
     // Delete All
     public void deleteAllColumns() {
         mDB.delete(DataBases.CreateDB._TABLENAME0, null, null);
     }
-
     // Delete DB
     public boolean deleteColumn(long id){
         return mDB.delete(DataBases.CreateDB._TABLENAME0, "_id="+id, null) > 0;
@@ -81,15 +72,14 @@ public class DbOpenHelper {
     public Cursor selectColumns(){
         return mDB.query(DataBases.CreateDB._TABLENAME0, null, null, null, null, null, null);
     }
-
-    // sort by column
-    public Cursor sortColumn(String sort){
+    // Select All
+    public Cursor selectall(){
         Cursor c = mDB.rawQuery( "SELECT * FROM scheduletable  ;", null);
         return c;
     }
-
+    // Select
     public Cursor selectstart(long selectstart, long selectend){
-        Cursor c = mDB.rawQuery( "SELECT * FROM scheduletable WHERE myday>"+selectstart+" AND myday<"+selectend+"  ;", null);
+        Cursor c = mDB.rawQuery( "SELECT * FROM scheduletable WHERE myday>="+selectstart+" AND myday<"+selectend+" ORDER BY myday  ;", null);
         return c;
     }
 }
