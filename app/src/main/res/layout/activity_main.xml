@@ -33,7 +33,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/main_fragment"
             app:layout_constraintStart_toStartOf="@id/toolbar"
-            app:layout_constraintTop_toBottomOf="@id/toolbar">
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            android:theme="@style/TabTheme">
 
             <android.support.design.widget.TabItem
                 android:id="@+id/month"

@@ -14,7 +14,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.example.android_calendar.DB.DBTest;
+import com.example.android_calendar.DB.CreateSchedule;
 import com.example.android_calendar.DB.DbSupport;
 import com.example.android_calendar.databinding.ActivityMainBinding;
 import com.example.android_calendar.fragment.DayFragment;
@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity implements TabLayout.BaseOnT
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_memoadd:
-                Intent intent = new Intent(this, DBTest.class);
+            case R.id.menu_scheduleadd:
+                Intent intent = new Intent(this, CreateSchedule.class);
                 startActivityForResult(intent, 300);
                 return true;
             default:

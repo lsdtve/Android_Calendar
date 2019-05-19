@@ -32,9 +32,8 @@ import java.util.List;
 import java.util.concurrent.Executors;
 
 public class MonthFragment extends Fragment implements OnMonthChangedListener, DbSupport {
-
-    private DbOpenHelper mDbOpenHelper;
     private final OneDayDecorator oneDayDecorator = new OneDayDecorator();
+    private DbOpenHelper mDbOpenHelper;
     private MonthFragmentBinding binding;
     MaterialCalendarView materialCalendarView;
 

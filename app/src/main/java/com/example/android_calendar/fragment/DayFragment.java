@@ -22,9 +22,10 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class DayFragment  extends Fragment implements DbSupport,View.OnClickListener {
+    public static final String DATE_FORMAT = "yyyy년 MM월 dd일";
+    public long selectTimestart;
     private DayFragmentBinding binding;
     private DbOpenHelper mDbOpenHelper;
-    public long selectTimestart;
     ArrayAdapter<String> arrayAdapter;
     SimpleDateFormat df;
     static ArrayList<String> arrayIndex = new ArrayList<String>();
@@ -45,7 +46,7 @@ public class DayFragment  extends Fragment implements DbSupport,View.OnClickList
         arrayAdapter = new ArrayAdapter<String>(this.getContext(), android.R.layout.simple_list_item_1);
         ListView listView = binding.dbListView;
         listView.setAdapter(arrayAdapter);
-        df = new SimpleDateFormat("MMM dd'th'  yyyy");
+        df = new SimpleDateFormat(DATE_FORMAT);
         binding.leftButton.setOnClickListener(this);
         binding.rightButton.setOnClickListener(this);
 

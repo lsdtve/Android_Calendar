@@ -69,6 +69,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="14sp"
                 android:text="일정을 입력하세요" />
 
             <EditText
@@ -79,6 +81,7 @@
                 android:ems="10"
                 android:gravity="start"
                 android:inputType="textPersonName"
+                android:privateImeOptions="defaultInputmode=korean"
                 android:maxLength="200" />
 
         </LinearLayout>

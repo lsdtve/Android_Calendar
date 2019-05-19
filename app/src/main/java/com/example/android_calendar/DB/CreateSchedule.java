@@ -18,7 +18,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class DBTest extends AppCompatActivity implements View.OnClickListener {
+public class CreateSchedule extends AppCompatActivity implements View.OnClickListener {
     CreateScheduleBinding binding;
     int mYear, mMonth, mDay;
     SimpleDateFormat df;

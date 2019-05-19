@@ -2,10 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" >
 
-    <group>
-        <item
-            android:id="@+id/menu_memoadd"
-            android:title="일정 추가"
-            />
-    </group>
+    <item
+        android:id="@+id/menu_scheduleadd"
+        android:title="추가"
+        app:showAsAction="always"
+        />
 </menu>

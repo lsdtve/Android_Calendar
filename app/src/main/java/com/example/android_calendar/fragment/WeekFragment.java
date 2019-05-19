@@ -30,15 +30,15 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class WeekFragment extends Fragment implements OnMonthChangedListener, DbSupport {
+    public static final String DATE_FORMAT = "yyyy년 MM월 dd일";
+    public long selectTimestart,selectTimeend;
+    private final OneDayDecorator oneDayDecorator = new OneDayDecorator();
     private WeekFragmentBinding binding;
     private DbOpenHelper mDbOpenHelper;
-    private final OneDayDecorator oneDayDecorator = new OneDayDecorator();
-    ArrayAdapter<String> arrayAdapter;
-    SimpleDateFormat df;
-    public long selectTimestart,selectTimeend;
-
     static ArrayList<String> arrayIndex = new ArrayList<String>();
     static ArrayList<String> arrayData = new ArrayList<String>();
+    SimpleDateFormat df;
+    ArrayAdapter<String> arrayAdapter;
 
     @Nullable
     @Override
@@ -53,8 +53,7 @@ public class WeekFragment extends Fragment implements OnMonthChangedListener, Db
         arrayAdapter = new ArrayAdapter<String>(this.getContext(), android.R.layout.simple_list_item_1);
         ListView listView = binding.dbListView;
         listView.setAdapter(arrayAdapter);
-        df = new SimpleDateFormat("yyyy년 MM월 dd일");
-
+        df = new SimpleDateFormat(DATE_FORMAT);
         mDbOpenHelper = new DbOpenHelper(this.getContext());
         mDbOpenHelper.open();
         mDbOpenHelper.create();
